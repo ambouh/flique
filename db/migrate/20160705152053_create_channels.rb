@@ -3,7 +3,7 @@ class CreateChannels < ActiveRecord::Migration
     create_table :channels do |t|
       t.string :image_url
       t.text :description
-      t.user :references
+      t.references :user
 
       t.timestamps null: false
     end
