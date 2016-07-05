@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :tags, only: [:create, :destroy]
   resources :categories, only: [:index, :show]
 
-  root 'welcome#index'
+  root to: 'welcome#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

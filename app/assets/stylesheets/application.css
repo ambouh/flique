@@ -16,4 +16,9 @@
  * {
    color: white;
    background-color: #5e4b46;
+   list-style: none;
  }
+
+nav {
+  display: inline;
+}
