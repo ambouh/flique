@@ -3,8 +3,7 @@ class CreatePosts < ActiveRecord::Migration
     create_table :posts do |t|
       t.string :title
       t.text :body
-      t.string :videoUrl
-      t.array :imageUrls
+      t.references :user
 
       t.timestamps null: false
     end

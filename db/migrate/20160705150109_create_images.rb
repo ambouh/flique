@@ -3,7 +3,7 @@ class CreateImages < ActiveRecord::Migration
     create_table :images do |t|
       t.string :title
       t.string :image_url
-      t.string :string
+      t.references :post, index: true, foreign_key: true
 
       t.timestamps null: false
     end
