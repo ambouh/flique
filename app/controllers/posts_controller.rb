@@ -1,14 +1,23 @@
 class PostsController < ApplicationController
 
-  before_filer :authenticate_user!, except [:show] 
+  before_action :authenticate_user!, except: [:show]
 
   def new
+    @post = Post.new
   end
 
   def create
+    @post = Post.new(post_params)
+    @post.user = current_user
+    if @post.save
+      redirect_to post_path(@post)
+    else
+      render :new
+    end
   end
 
   def show
+    @post = Post.find(params[:id])
   end
 
   def edit

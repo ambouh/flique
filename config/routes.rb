@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   resources :channels, only: [:index, :show]
-  resources :posts, only: [:show, :edit, :update, :destroy]
+  resources :posts, only: [:new, :create, :show, :edit, :update, :destroy]
 
   resources :tags, only: [:create, :destroy]
   resources :categories, only: [:index, :show]
