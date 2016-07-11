@@ -1,0 +1,4 @@
+<h3>All channels</h3>
+<% @channels.each do |channel| %>
+<%= link_to channel.user.username, channel_path(channel) %>
+<% end %>
