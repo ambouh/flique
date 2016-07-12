@@ -2,6 +2,7 @@
 
 
 Ruby version: 4.2.6
+
 Database: Postgresql
 
 To set up locally:
@@ -12,5 +13,3 @@ To set up locally:
     $ rake db:migrate
     $ rails s
   - Open browser tab, go to localhost:3000
-
-<tt>rake doc:app</tt>.
